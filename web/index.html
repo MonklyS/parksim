@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Design a theme park and watch it run: live wait times, weather, breakdowns and guests." />
+    <title>ParkSim</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎡</text></svg>" />
+  </head>
+  <body data-mode="design">
+    <header class="topbar">
+      <div class="brand"><span aria-hidden="true">🎡</span> ParkSim</div>
+      <input id="park-name" class="park-name" aria-label="Park name" maxlength="60" spellcheck="false" />
+      <span id="save-state" class="pill"></span>
+      <div class="spacer"></div>
+      <div class="seg" role="group" aria-label="Mode">
+        <button data-mode="design" class="active">✏️ Design</button>
+        <button data-mode="operate">▶ Operate</button>
+      </div>
+      <div class="actions">
+        <button id="btn-new">New</button>
+        <button id="btn-sample">Sample park</button>
+        <button id="btn-share">Share</button>
+        <button id="btn-save" class="primary">Save</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <aside id="palette" class="palette" aria-label="Build tools"></aside>
+      <section id="stage" class="stage">
+        <div class="stage-hint">Scroll to zoom · Right-drag to pan · <button id="btn-fit" class="link">Fit</button></div>
+        <div class="legend" id="legend" hidden>
+          Guest mood <span class="mood-bar"></span> <small>unhappy → happy</small>
+        </div>
+      </section>
+      <aside id="panel" class="panel" aria-live="polite"></aside>
+    </main>
+    <div id="toast" class="toast" role="status"></div>
+    <dialog id="report" class="report"></dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
