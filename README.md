@@ -1,5 +1,7 @@
 # ParkSim: Theme Park Designer & Operations Simulator
 
+[![CI](https://github.com/MonklyS/parksim/actions/workflows/ci.yml/badge.svg)](https://github.com/MonklyS/parksim/actions/workflows/ci.yml)
+
 Design a theme park in your browser, then watch it operate: guests arrive, lines build,
 wait times update live, afternoon storms put coasters on lightning hold, rides break
 down, and guests who get hurt need a First Aid station you remembered to build.
